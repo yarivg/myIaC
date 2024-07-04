@@ -1,5 +1,5 @@
 environments:
   firstService:
     name: firstService
-    templateName: 'null-failed'
+    templateName: 'null'
     workspace: firstService-5
