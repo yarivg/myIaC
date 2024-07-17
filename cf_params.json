@@ -1,0 +1,10 @@
+[
+  {
+    "ParameterKey": "BucketName",
+    "ParameterValue": "hello-world"
+  },
+  {
+    "ParameterKey": "Description",
+    "ParameterValue": "This is my description."
+  }
+]
