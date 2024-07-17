@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Dummy CloudFormation stack to simulate a null resource
+
+Resources:
+  DummyBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "dummy-bucket-by-yarivg"
