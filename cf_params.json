@@ -1,4 +1,5 @@
-
+[
+  {
     "ParameterKey": "BucketName",
     "ParameterValue": "hello-world"
   },
