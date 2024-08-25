@@ -1,3 +1,18 @@
+terraform {
+  required_providers {
+    env0 = {
+      source = "env0/env0"
+    }
+  }
+}
+
+# Configure the env0 provider
+
+provider "env0" {
+  api_key    = var.env0_api_key
+  api_secret = var.env0_api_secret
+}
+
 resource "null_resource" "some_resource" {
   count = 3000
 }
