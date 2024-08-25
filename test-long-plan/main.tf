@@ -11,6 +11,7 @@ terraform {
 provider "env0" {
   api_key    = var.env0_api_key
   api_secret = var.env0_api_secret
+  api_endpoint = "https://api-dev.dev.env0.com"
 }
 
 resource "null_resource" "some_resource" {
