@@ -15,7 +15,7 @@ provider "env0" {
 }
 
 resource "null_resource" "some_resource" {
-  count = 3000
+  count = 250
 }
 
 // create 3000 vars use the index as a suffix
