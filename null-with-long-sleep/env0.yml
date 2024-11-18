@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformPlan:
+      after: # sleep 100 seconds
+        - sleep 100 && echo 'asd'
