@@ -1,0 +1,4 @@
+environments:
+  testB:
+    name: "test-name"
+    projectName: "dev"
