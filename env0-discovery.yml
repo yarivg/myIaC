@@ -2,3 +2,4 @@ environments:
   testG:
     name: "test-name"
     projectName: "dev"
+    templateName: "null"
