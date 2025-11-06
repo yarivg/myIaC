@@ -1,4 +1,4 @@
 environments:
-  testC:
+  testD:
     name: "test-name"
     projectName: "dev"
