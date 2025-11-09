@@ -1,5 +1,5 @@
 environments:
-  testM:
-    name: "test-name"
+  testN:
+    name: "test-name-different"
     projectName: "dev"
     templateName: "null"
