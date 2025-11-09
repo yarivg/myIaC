@@ -1,0 +1,7 @@
+environments:
+  testR:
+    name: "env-after-changes"
+    projectName: "dev"
+    templateName: "null-2"
+    
+    
