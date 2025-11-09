@@ -3,3 +3,4 @@ environments:
     name: "test-name-for-gili"
     projectName: "dev"
     templateName: "null-2"
+    
