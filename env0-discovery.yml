@@ -2,4 +2,4 @@ environments:
   testO:
     name: "test-name-for-gili"
     projectName: "dev"
-    templateName: "null"
+    templateName: "null-2"
