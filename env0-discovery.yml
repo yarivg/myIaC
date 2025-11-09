@@ -2,5 +2,5 @@ environments:
   testR:
     name: "env-after-changes"
     projectName: "dev"
-    templateName: "null"
+    templateName: "null-2"
     
