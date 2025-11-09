@@ -2,5 +2,5 @@ environments:
   testQ:
     name: "test-name-for-gili-2"
     projectName: "dev"
-    templateName: "null-2"
+    templateName: "null"
     
