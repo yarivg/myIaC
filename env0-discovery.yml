@@ -1,5 +1,5 @@
 environments:
-  testN:
-    name: "test-name-different"
+  testO:
+    name: "test-name-for-gili"
     projectName: "dev"
     templateName: "null"
