@@ -7,7 +7,7 @@ environments:
     templateName: "app-template"
 
     # Optional Properties
-    workspaceName: "asd"
+    workspaceName: "asde"
     # requiresApproval: <>
     # isRemoteBackend: <>
     # autoDeployOnPathChangesOnly: <>
