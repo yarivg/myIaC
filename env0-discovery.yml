@@ -2,7 +2,7 @@ environments:
   firstEnv:
     name: "env-after-changes"
     # projectId: <>
-    projectName: "dev-team-1|App|us-east-1"
+    projectName: "dev-team1|App|us-east-1"
     # templateId: <>
     templateName: "app-template"
 
