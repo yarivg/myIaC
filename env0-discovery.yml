@@ -17,13 +17,3 @@ environments:
     # vcsCommandsAlias: <>
     # pullRequestPlanDeployments: <>
     # driftDetectionCron: <>
-
-  secondEnv:
-    name: "second-env"
-    # projectId: <>
-    projectName: "dev-team1|App|us-east-1"
-    # templateId: <>
-    templateName: "app-template"
-
-    # Optional Properties
-    workspaceName: "adjahjaksdhfskjashdjfahsdjkahsdjkhasdjkfhasdkjlhakjsldhjkasdhkjasdhkjasldfkjasdhkjasdhkjasdhjkasdfkjasdlhkjasdhkjasdfkjasdfkjasdfkjasdfjfahkdsjlhkjasdhkjsdfasde"
