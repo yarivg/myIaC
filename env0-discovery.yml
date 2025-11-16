@@ -1,0 +1,19 @@
+environments:
+  firstEnv:
+    name: "env-after-changes"
+    # projectId: <>
+    projectName: "dev-team-1|App|us-east-1"
+    # templateId: <>
+    templateName: "app-template"
+
+    # Optional Properties
+    workspaceName: "asd"
+    # requiresApproval: <>
+    # isRemoteBackend: <>
+    # autoDeployOnPathChangesOnly: <>
+    # autoDeployByCustomGlob: <>
+    # continuousDeployment: <>
+    # vcsPrCommentsEnabled: <> 
+    # vcsCommandsAlias: <>
+    # pullRequestPlanDeployments: <>
+    # driftDetectionCron: <>
