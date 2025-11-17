@@ -37,3 +37,4 @@ environments:
     variableFiles:
       - path: common.tfvars
     <<: *defaultConfig
+
