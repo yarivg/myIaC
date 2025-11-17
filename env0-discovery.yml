@@ -11,7 +11,7 @@ environments:
     templateName: "app-template"
     
     workspaceName: "too-long-workspace-nameeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-    # workspaceName: "some-workspace"
+    # workspaceName: "valid-workspace"
 
     variableFiles:
       - path: common.tfvars
