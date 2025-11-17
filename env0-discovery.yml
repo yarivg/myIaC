@@ -10,7 +10,7 @@ environments:
     # templateId: <>
     templateName: "app-template"
     
-    workspaceName: "too-long-workspace-nameeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    workspaceName: "too-long-workspacee-nameeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
     # workspaceName: "valid-workspace"
 
     variableFiles:
