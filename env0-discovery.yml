@@ -23,7 +23,7 @@ environments:
     name: "my-errored-environment"
     projectName: "dev-team1|App|us-east-1"
     templateName: "app-template"
-    workspaceName: "some-workspace" # #1 Duplicate
+    workspaceName: "some-other-workspace" # #1 Duplicate
   
   secondEnv:
     name: "second-environment"
