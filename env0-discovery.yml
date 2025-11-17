@@ -4,7 +4,7 @@ commonConfig: &defaultConfig
 
 environments:
   firstEnv:
-    name: "first-environment"
+    name: "first-environment-renamed"
     # projectId: <>
     projectName: "dev-team1|App|us-east-1"
     # templateId: <>
