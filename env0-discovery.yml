@@ -1,7 +1,6 @@
 # env0-discovery.yaml
 commonConfig: &defaultConfig
-  continuousDeployment: false
-  pullRequestPlanDeployments: false
+  continuousDeployment: true
 
 environments:
   firstEnv:
