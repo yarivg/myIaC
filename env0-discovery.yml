@@ -12,16 +12,25 @@ environments:
     templateName: "app-template"
     workspaceName: "asde"
     requiresApproval: true
+
+    variableFiles:
+      - path: common.tfvars
+      - path: demo/demo.tfvars
+    
     <<: *defaultConfig
   
   secondEnv:
     name: "second-environment"
     # projectId: <>
-    projectName: "us-east-1"
-    # projectName: "dev-team1|DB|us-east-1"
+    # projectName: "us-east-1"
+    projectName: "dev-team1|DB|us-east-1"
     # templateId: <>
     templateName: "db-template"
 
     vcsPrCommentsEnabled: true
     vcsCommandsAlias: 'second'
+
+    variableFiles:
+      - path: common.tfvars
+      
     <<: *defaultConfig
