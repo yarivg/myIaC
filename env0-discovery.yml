@@ -21,8 +21,8 @@ environments:
 
   secondEnv:
     name: "second-environment"
-    projectName: "us-east-1"
-    # projectName: "dev-team1|DB|us-east-1" # #2 Resolve using full name
+    # projectName: "us-east-1"
+    projectName: "dev-team1|DB|us-east-1" # #2 Resolve using full name
     templateName: "db-template"
 
     variableFiles:
