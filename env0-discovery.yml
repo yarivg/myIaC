@@ -1,19 +1,27 @@
+# env0-discovery.yaml
+commonConfig: &defaultConfig
+  continuousDeployment: false
+  pullRequestPlanDeployments: false
+
 environments:
   firstEnv:
-    name: "env-after-changes"
+    name: "first-environment"
     # projectId: <>
     projectName: "dev-team1|App|us-east-1"
     # templateId: <>
     templateName: "app-template"
-
-    # Optional Properties
     workspaceName: "asde"
-    # requiresApproval: <>
-    # isRemoteBackend: <>
-    # autoDeployOnPathChangesOnly: <>
-    # autoDeployByCustomGlob: <>
-    # continuousDeployment: <>
-    # vcsPrCommentsEnabled: <> 
-    # vcsCommandsAlias: <>
-    # pullRequestPlanDeployments: <>
-    # driftDetectionCron: <>
+    requiresApproval: true
+    <<: *defaultConfig
+  
+  secondEnv:
+    name: "second-environment"
+    # projectId: <>
+    projectName: "us-east-1"
+    # projectName: "dev-team1|DB|us-east-1"
+    # templateId: <>
+    templateName: "db-template"
+
+    vcsPrCommentsEnabled: true
+    vcsCommandsAlias: 'second'
+    <<: *defaultConfig
