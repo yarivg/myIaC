@@ -10,7 +10,8 @@ environments:
     projectName: "dev-team1|App|us-east-1"
     # templateId: <>
     templateName: "app-template"
-    workspaceName: "asde"
+    
+    workspaceName: "some-workspace"
     requiresApproval: true
 
     variableFiles:
@@ -18,13 +19,17 @@ environments:
       - path: demo/demo.tfvars
     
     <<: *defaultConfig
+
+  # dupWorkspace:
+  #   name: "my-errored-environment"
+  #   projectName: "dev-team1|App|us-east-1"
+  #   templateName: "app-template"
+  #   workspaceName: "some-workspace" # #1 Duplicate
   
   secondEnv:
     name: "second-environment"
-    # projectId: <>
-    # projectName: "us-east-1"
-    projectName: "dev-team1|DB|us-east-1"
-    # templateId: <>
+    projectName: "us-east-1"
+    # projectName: "dev-team1|DB|us-east-1" # #2 Resolve using full name
     templateName: "db-template"
 
     vcsPrCommentsEnabled: true
@@ -32,5 +37,4 @@ environments:
 
     variableFiles:
       - path: common.tfvars
-      
     <<: *defaultConfig
