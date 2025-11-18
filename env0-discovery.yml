@@ -14,6 +14,7 @@ environments:
     workspaceName: "valid-workspace"
 
     variableFiles:
+      - path: common.tfvars
       - path: demo/demo.tfvars
     
     <<: *defaultConfig
