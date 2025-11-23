@@ -11,3 +11,11 @@ variable "json_value" {
 
   default = null
 }
+
+variable "hcl_value" {
+  type = object({
+    some_array = list(string)
+  })
+
+  default = null
+}
