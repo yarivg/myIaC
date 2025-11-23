@@ -17,5 +17,14 @@ variable "hcl_value" {
     some_array = list(string)
   })
 
+  default = ""
+}
+
+
+variable "json_value2" {
+  type = object({
+    some_array = list(string)
+  })
+
   default = null
 }
