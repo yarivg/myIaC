@@ -17,7 +17,7 @@ variable "hcl_value" {
     some_array = list(string)
   })
 
-  default = ""
+  default = null
 }
 
 
