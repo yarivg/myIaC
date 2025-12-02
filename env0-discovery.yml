@@ -10,8 +10,8 @@ environments:
     # templateId: <>
     templateName: "app-template"
     
-    workspaceName: "too-long-workspacee-that-should-cause-an-error-219328190238910283901283910283912831902839012839108239128390128310932"
-    # workspaceName: "valid-workspace"
+    # workspaceName: "too-long-workspacee-that-should-cause-an-error-219328190238910283901283910283912831902839012839108239128390128310932"
+    workspaceName: "valid-workspace"
 
     variableFiles:
       - path: common.tfvars
