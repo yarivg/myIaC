@@ -1,0 +1,39 @@
+commonConfig: &defaultConfig
+  continuousDeployment: true
+  requiresApproval: false
+
+environments:
+  imported:
+    name: "import-me"
+    # projectId: <>
+    projectName: "dev-team1"
+    # templateId: <>
+    templateName: "app-template"
+    workspaceName: "env0fc93bd"
+
+  firstEnv:
+    name: "first-environment"
+    # projectId: <>
+    projectName: "dev-team1|App|us-east-1"
+    # templateId: <>
+    templateName: "app-template"
+    
+    # workspaceName: "too-long-workspacee-that-should-cause-an-error-219328190238910283901283910283912831902839012839108239128390128310932"
+    workspaceName: "valid-workspace"
+
+    variableFiles:
+      - path: common.tfvars
+      - path: demo/demo.tfvars
+    
+    <<: *defaultConfig
+
+  secondEnv:
+    name: "second-environment"
+    # projectName: "us-east-1"
+    projectName: "dev-team1|DB|us-east-1" # #2 Resolve using full name
+    templateName: "db-template"
+
+    variableFiles:
+      - path: common.tfvars
+    <<: *defaultConfig
+
