@@ -3,6 +3,14 @@ commonConfig: &defaultConfig
   requiresApproval: false
 
 environments:
+  imported:
+    name: "import-me"
+    # projectId: <>
+    projectName: "dev-team1"
+    # templateId: <>
+    templateName: "app-template"
+    worspaceName: "env0fc93bd"
+
   firstEnv:
     name: "first-environment"
     # projectId: <>
