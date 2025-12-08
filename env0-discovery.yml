@@ -9,7 +9,7 @@ environments:
     projectName: "dev-team1"
     # templateId: <>
     templateName: "app-template"
-    worspaceName: "env0fc93bd"
+    workspaceName: "env0fc93bd-1"
 
   firstEnv:
     name: "first-environment"
