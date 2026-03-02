@@ -7,3 +7,7 @@ resource "null_resource" "some_resource2" {
 output "a" {
   value = "a as an output"
 }
+
+output "b" {
+  value = "b as an output"
+}
