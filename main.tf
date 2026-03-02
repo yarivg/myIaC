@@ -11,3 +11,7 @@ output "a" {
 output "b" {
   value = "b as an output"
 }
+
+output "c" {
+  value = "c as an output"
+}
