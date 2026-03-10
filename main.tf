@@ -1,3 +1,7 @@
+variable "some_common_var" {
+  default = ""
+}
+
 resource "null_resource" "some_resource" {
 }
 

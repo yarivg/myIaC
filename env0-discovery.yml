@@ -1,0 +1,9 @@
+environments:
+  eng-1276-test:
+    name: "eng-1276-discovery-test"
+    projectName: "ENG-1276"
+    templateName: "null switch"
+    pullRequestPlanDeployments: true
+    continuousDeployment: true
+    variableFiles:
+      - path: common.tfvars
