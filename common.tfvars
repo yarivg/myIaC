@@ -1,1 +1,1 @@
-some_common_var="some-common-value"
+some_common_var="modified-from-pr-branch"
