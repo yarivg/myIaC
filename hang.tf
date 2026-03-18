@@ -1,6 +1,3 @@
-resource "null_resource" "hang" {
-  provisioner "local-exec" {
-    command = "sleep 99999"
-  }
+data "external" "hang" {
+  program = ["bash", "-c", "sleep 99999"]
 }
-
