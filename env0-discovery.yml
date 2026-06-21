@@ -2,7 +2,8 @@ environments:
   eng-1276-test:
     name: "eng-1276-discovery-test"
     projectName: "ENG-1276"
-    templateName: "null switch"
+    templateName: "null-eng-1276"
+    revision: "eng-1276-revision"
     pullRequestPlanDeployments: true
     continuousDeployment: true
     variableFiles:
