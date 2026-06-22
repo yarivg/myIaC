@@ -1,11 +1,5 @@
 terraform {
   required_version = ">= 1.4.0"
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
 }
 
 variable "drop_name" {
@@ -14,54 +8,33 @@ variable "drop_name" {
   default     = "air-max-day"
 }
 
-variable "region" {
-  type        = string
-  description = "AWS region for the drop"
-  default     = "us-east-1"
-}
-
 variable "storefront_replicas" {
   type        = number
-  description = "Number of storefront worker instances. Drives the size (and the cost) of the drop - bump this for a global drop."
+  description = "Number of storefront worker replicas for the drop"
   default     = 3
 }
 
-variable "instance_type" {
-  type        = string
-  description = "EC2 instance type for storefront workers. Bigger = pricier = more likely to need platform approval."
-  default     = "m5.large"
+variable "monthly_cost_usd" {
+  type        = number
+  description = "Declared estimated monthly cost of this drop (USD). The OPA approval policy gates on this value - over the budget, the deploy needs platform admin approval."
+  default     = 10
 }
 
-variable "ami" {
-  type        = string
-  description = "AMI for the storefront workers. The default is a placeholder used for cost estimation; set a real region-specific AMI for an actual apply."
-  default     = "ami-0c02fb55956c7d316"
+# Simulated SNKRS drop stack (pure null_resource: deploys and destroys instantly,
+# with no cloud account). The cost signal comes from var.monthly_cost_usd.
+resource "null_resource" "product_catalog" {
+  triggers = { drop = var.drop_name }
 }
 
-# Provider is configured to plan without real credentials so env0 can run the
-# plan + Infracost cost estimation in the demo. A real apply uses the cloud
-# credentials env0 injects into the deployment (if the project has any).
-provider "aws" {
-  region = var.region
-  # Dummy static credentials so `terraform plan` (and Infracost pricing) run
-  # with no real cloud account. For an actual apply, supply real credentials
-  # via the project's env0 cloud credentials instead of these.
-  access_key                  = "demo"
-  secret_key                  = "demo"
-  skip_credentials_validation = true
-  skip_requesting_account_id  = true
-  skip_metadata_api_check     = true
+resource "null_resource" "inventory_cache" {
+  triggers = { drop = var.drop_name }
 }
 
-# SNKRS storefront worker fleet - the priced, scalable part of the drop.
-resource "aws_instance" "storefront" {
-  count         = var.storefront_replicas
-  ami           = var.ami
-  instance_type = var.instance_type
+resource "null_resource" "queue_holding_area" {
+  triggers = { drop = var.drop_name }
+}
 
-  tags = {
-    Name = "${var.drop_name}-storefront-${count.index}"
-    Drop = var.drop_name
-    App  = "SNKRS"
-  }
+resource "null_resource" "storefront_workers" {
+  count    = var.storefront_replicas
+  triggers = { drop = var.drop_name, replica = count.index }
 }

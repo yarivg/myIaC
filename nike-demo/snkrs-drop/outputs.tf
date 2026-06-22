@@ -6,14 +6,10 @@ output "storefront_replicas" {
   value = var.storefront_replicas
 }
 
-output "instance_type" {
-  value = var.instance_type
+output "monthly_cost_usd" {
+  value = var.monthly_cost_usd
 }
 
-output "region" {
-  value = var.region
-}
-
-output "storefront_instance_ids" {
-  value = aws_instance.storefront[*].id
+output "storefront_endpoint" {
+  value = "https://${var.drop_name}.snkrs.nike.demo"
 }
