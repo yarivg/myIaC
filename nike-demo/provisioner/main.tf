@@ -11,12 +11,14 @@ resource "env0_project" "snkrs" {
   description = "Nike SNKRS app - self-service infrastructure for sneaker drops"
 }
 
-# --- Project policy: cost estimation ON, no blanket approval gate ------------
-# Approval is driven purely by the OPA cost policy below, so cheap drops deploy
-# freely and only costly ones pause for a platform admin.
+# --- Project policy: deploys require approval; cost estimation ON ------------
+# requires_approval_default = true means a Planner (the developer) is allowed to
+# TRIGGER a deploy but cannot approve it - approval (apply) needs RUN_APPLY,
+# which only the platform admin has. The OPA cost policy still runs and reports
+# the estimated spend as the reason for the gate.
 resource "env0_project_policy" "snkrs" {
   project_id                = env0_project.snkrs.id
-  requires_approval_default = false
+  requires_approval_default = true
   include_cost_estimation   = true
   max_ttl                   = "4-d"
   default_ttl               = "4-d"
@@ -63,11 +65,12 @@ resource "env0_user_project_assignment" "platform_admin" {
   role       = "Admin"
 }
 
-# SNKRS developer: can deploy, but cannot self-approve a gated deployment.
+# SNKRS developer: Planner can trigger deploys (RUN_PLAN) but cannot approve
+# them (approval/apply needs RUN_APPLY) - so they can never self-approve.
 resource "env0_user_project_assignment" "developer" {
   user_id    = var.developer_user_id
   project_id = env0_project.snkrs.id
-  role       = "Deployer"
+  role       = "Planner"
 }
 
 output "project_id" {
