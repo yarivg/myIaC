@@ -47,7 +47,7 @@ resource "env0_template" "drop_stack" {
   path                   = var.drop_template_path
   github_installation_id = var.templates_github_installation_id
   type                   = "terraform"
-  terraform_version      = "1.6.6"
+  terraform_version      = "1.5.7"
 }
 
 resource "env0_template_project_assignment" "drop_stack" {
