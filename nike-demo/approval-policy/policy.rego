@@ -8,7 +8,7 @@ package env0
 # WAITING_FOR_USER until an approver signs off, rather than hard-failing it.
 
 # USD / month. Above this, a deploy needs platform admin approval.
-maxCostIncrease := 200
+maxCostIncrease := 200.0
 
 monthlyDiff := input.costEstimation.monthlyCostDiff
 
