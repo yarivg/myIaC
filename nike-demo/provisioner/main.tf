@@ -18,8 +18,8 @@ resource "env0_project_policy" "snkrs" {
   project_id                = env0_project.snkrs.id
   requires_approval_default = false
   include_cost_estimation   = true
-  max_ttl                   = "7-d"
-  default_ttl               = "1-d"
+  max_ttl                   = "4-d"
+  default_ttl               = "4-d"
 }
 
 # --- Guardrail: OPA cost-approval policy (the env0 provider applying a policy) -

@@ -10,7 +10,7 @@ package env0
 # We always emit an explicit result so a custom policy never defaults to pending.
 
 # USD / month. Above this, a deploy needs platform admin approval.
-maxCostIncrease := 200.0
+maxCostIncrease := 5.0
 
 monthlyDiff := input.costEstimation.monthlyCostDiff
 
