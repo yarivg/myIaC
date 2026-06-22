@@ -1,0 +1,8 @@
+name: 'SNKRS Cost Approval'
+description: "Requires Nike platform admin approval when a deployment's estimated monthly cost increase exceeds the budget threshold."
+explanation: "Lets the SNKRS team self-serve cheap environments freely, while costly drops pause for platform sign-off before going live."
+categories:
+  - 'Cost'
+tags:
+  - 'Budget'
+  - 'Approval'
