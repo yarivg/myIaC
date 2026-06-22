@@ -20,14 +20,14 @@ is_deploy {
 pending[msg] {
 	is_deploy
 	cost > maxCostIncrease
-	msg := sprintf("Estimated monthly cost of $%.2f exceeds the $%.2f budget - Nike platform admin approval required before this drop goes live.", [cost, maxCostIncrease])
+	msg := sprintf("Estimated monthly cost of $%v exceeds the $%v budget - Nike platform admin approval required before this drop goes live.", [cost, maxCostIncrease])
 }
 
 # Within-budget drop -> goes live with no gate.
 allow[msg] {
 	is_deploy
 	cost <= maxCostIncrease
-	msg := sprintf("Estimated monthly cost of $%.2f is within the $%.2f budget.", [cost, maxCostIncrease])
+	msg := sprintf("Estimated monthly cost of $%v is within the $%v budget.", [cost, maxCostIncrease])
 }
 
 # Anything that isn't a deploy (e.g. destroy) -> nothing to gate on cost.
