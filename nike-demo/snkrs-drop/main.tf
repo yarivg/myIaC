@@ -42,7 +42,12 @@ variable "ami" {
 # plan + Infracost cost estimation in the demo. A real apply uses the cloud
 # credentials env0 injects into the deployment (if the project has any).
 provider "aws" {
-  region                      = var.region
+  region = var.region
+  # Dummy static credentials so `terraform plan` (and Infracost pricing) run
+  # with no real cloud account. For an actual apply, supply real credentials
+  # via the project's env0 cloud credentials instead of these.
+  access_key                  = "demo"
+  secret_key                  = "demo"
   skip_credentials_validation = true
   skip_requesting_account_id  = true
   skip_metadata_api_check     = true
