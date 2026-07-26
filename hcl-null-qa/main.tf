@@ -37,28 +37,39 @@ variable "dns" {
 
 resource "null_resource" "qa" {}
 
+locals {
+  describe = { for k, v in {
+    v_null_keyword = var.v_null_keyword
+    v_padded_null  = var.v_padded_null
+    v_quoted_null  = var.v_quoted_null
+    v_bare_string  = var.v_bare_string
+    v_quoted_empty = var.v_quoted_empty
+    v_left_empty   = var.v_left_empty
+  } : k => v == null ? "IS_REAL_NULL" : "IS_STRING<${v}>" }
+}
+
 output "o_null_keyword" {
-  value = var.v_null_keyword
+  value = local.describe.v_null_keyword
 }
 
 output "o_padded_null" {
-  value = var.v_padded_null
+  value = local.describe.v_padded_null
 }
 
 output "o_quoted_null" {
-  value = var.v_quoted_null
+  value = local.describe.v_quoted_null
 }
 
 output "o_bare_string" {
-  value = var.v_bare_string
+  value = local.describe.v_bare_string
 }
 
 output "o_quoted_empty" {
-  value = format("[%s]", var.v_quoted_empty)
+  value = local.describe.v_quoted_empty
 }
 
 output "o_left_empty" {
-  value = var.v_left_empty
+  value = local.describe.v_left_empty
 }
 
 output "o_dns" {
