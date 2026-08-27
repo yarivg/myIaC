@@ -1,3 +1,4 @@
+# APO-681 no-reason row
 # ---- HCL-format variables (the fix under test) ----
 variable "v_null_keyword" {
   type    = string
