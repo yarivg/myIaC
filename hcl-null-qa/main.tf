@@ -1,3 +1,4 @@
+# APO-681 QA fixture change
 # ---- HCL-format variables (the fix under test) ----
 variable "v_null_keyword" {
   type    = string
