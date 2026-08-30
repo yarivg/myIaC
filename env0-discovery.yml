@@ -8,9 +8,3 @@ environments:
     continuousDeployment: true
     variableFiles:
       - path: common.tfvars
-  apo690-qa:
-    name: "apo690-qa-env"
-    projectName: "ENG-1276"
-    templateName: "null-eng-1276"
-    revision: "eng-1276-revision"
-    pullRequestPlanDeployments: true
