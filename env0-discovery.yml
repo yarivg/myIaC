@@ -8,3 +8,5 @@ environments:
     continuousDeployment: true
     variableFiles:
       - path: common.tfvars
+
+# APO-690 QA: cosmetic edit, no environment property change
